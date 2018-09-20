@@ -13,6 +13,18 @@ if(isset($_GET['action'])){
         home();
     }
 
+    if($_GET['action'] === 'inscription'){
+        inscription();
+    }
+
+    if($_GET['action'] === 'connexion'){
+        connexion();
+    }
+
+    if($_GET['action'] === 'portfolio'){
+        portfolio();
+    }
+
 }
 else{
     home();
