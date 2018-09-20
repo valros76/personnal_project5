@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="?action=home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="?action=home">Acceuil <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="?action=portfolio">Portfolio</a>

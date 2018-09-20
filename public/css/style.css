@@ -9,6 +9,7 @@ body{
     -moz-box-sizing:border-box;
     box-sizing:border-box;
     text-align:center;
+    word-wrap:break-word;
 }
 
 .pageContainer{
@@ -66,4 +67,69 @@ body{
 .content form input{
     display:block;
     margin:0 auto;
+}
+
+.homeContainer{
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.homeContainer a{
+    color:rgb(255,255,255);
+    text-decoration:none;
+}
+
+.homeContainer img{
+    max-width:80%;
+    height:auto;
+    margin:5px auto;
+    padding:0;
+    border:1px solid black;
+}
+
+.portfolioContainer{
+    width:100%;
+    margin:0 auto;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.portfolioContainer hr{
+    width:100%;
+    height:20px;
+}
+
+.portfolio_item{
+    width:100%;
+    margin:20px auto;
+    padding:0;
+    background:rgba(220,220,220,0.8);
+    border-top:2px solid rgba(45,45,45,0.3);
+    border-bottom:2px solid rgba(45,45,45,0.3);
+}
+
+.portfolio_item h3{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-decoration:overline;
+}
+
+.portfolio_item p{
+    width:70%;
+    margin:20px auto;
+}
+
+.portfolio_item img{
+    max-width:80%;
+    height:auto;
+    margin:5px auto;
+    padding:0;
 }

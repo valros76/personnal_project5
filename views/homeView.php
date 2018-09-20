@@ -5,11 +5,15 @@
 <?php ob_start();
     
     echo '
-        <article>
-            <h2>Acceuil</h2>
+        <article class="homeContainer">
+            <h2>Accueil</h2>
+            <hr/>
             <p>
-                Bienvenue sur la page d\'acceuil du site.<br/>
-                Pour profiter de l\'ensemble des fonctionnalités du site, veuillez vous inscrire.    
+                Bienvenue sur la page d\'accueil du site.<br/><br/>
+                Vous êtes ici pour consulter mon portfolio ?<br/><br/>
+                <a href="?action=portfolio"><button class="btn btn-info">Consulter</button></a><br/>
+                <hr/>
+                <img src="public/img/nomad.png" alt="img_Accueil"/>
             </p>
         </article>
     ';
