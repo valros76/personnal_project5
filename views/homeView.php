@@ -6,8 +6,11 @@
     
     echo '
         <article>
-            <h2>Titre du contenu 1</h2>
-            <p>Contenu 1...</p>
+            <h2>Acceuil</h2>
+            <p>
+                Bienvenue sur la page d\'acceuil du site.<br/>
+                Pour profiter de l\'ensemble des fonctionnalités du site, veuillez vous inscrire.    
+            </p>
         </article>
     ';
 
