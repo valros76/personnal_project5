@@ -17,8 +17,20 @@ if(isset($_GET['action'])){
         inscription();
     }
 
+    if($_GET['action'] === 'new_inscription'){
+        newInscription();
+    }
+
     if($_GET['action'] === 'connexion'){
         connexion();
+    }
+
+    if($_GET['action'] === 'connect'){
+        connect();
+    }
+
+    if($_GET['action'] === 'disconnect'){
+        disconnect();
     }
 
     if($_GET['action'] === 'portfolio'){
@@ -26,6 +38,7 @@ if(isset($_GET['action'])){
     }
 
 }
+
 else{
     home();
 }

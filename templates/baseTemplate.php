@@ -25,12 +25,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?action=portfolio">Portfolio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?action=inscription">Inscription</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?action=connexion">Connexion</a>
-                    </li>
+                    <?php 
+                        if(!isset($_SESSION['username'])){;
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?action=inscription">Inscription</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?action=connexion">Connexion</a>
+                        </li>
+                    <?php 
+                        }
+                        else{;
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?action=disconnect">Déconnexion</a>
+                        </li>
+                    <?php };?>
                 </ul>
             </div>
         </nav>

@@ -5,7 +5,7 @@
 <?php ob_start();
     echo '
         <article>
-            <h2>Formmulaire de connexion</h2>
+            <h2>Formulaire de connexion</h2>
             <p>
                 <form action="?action=connect" method="post">
                     <label for="username">Username</label>
