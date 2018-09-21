@@ -31,4 +31,4 @@
     ';
 $content = ob_get_clean();?>
 
-<?php require('templates/baseTemplate.php'); ?>
+<?php require('templates/shifumiTemplate.php'); ?>

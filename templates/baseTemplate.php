@@ -61,6 +61,5 @@
 
     
         
-    <script src="public/js/shifumi.js"></script>
 </body>
 </html>
