@@ -7,9 +7,9 @@
         <article>
             <h3>Shifumi</h3>
             <div class="textArticleHome">
-                <button id="buttoniser">Pierre</button>
-                <button id="buttoniser">Feuille</button>
-                <button id="buttoniser">Ciseaux</button>
+                <button class="btn btn-info">Pierre</button>
+                <button class="btn btn-success">Feuille</button>
+                <button class="btn btn-warning">Ciseaux</button>
                 <hr/>
                 <div id="resultatJoueur" style="display:inline-block;">Joueur</div>
                 <hr width="50px"/>
