@@ -97,4 +97,12 @@ require('models/database.php');
         require('views/pages/portfolio.php');
     }
 
+    function bonus(){
+        require('views/pages/bonus/bonus.php');
+    }
+
+    function shifumi(){
+        require('views/pages/bonus/shifumi.php');
+    }
+
 ?>

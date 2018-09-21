@@ -25,6 +25,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?action=portfolio">Portfolio</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?action=bonus">Bonus</a>
+                    </li>
                     <?php 
                         if(!isset($_SESSION['username'])){;
                         ?>
@@ -52,34 +55,12 @@
     </section>
 
     <footer class="foot">
-        <!--
-            <div class="paginationContainer">
-            <ul class="pagination">
-                <li class="page-item disabled">
-                <a class="page-link" href="#">&laquo;</a>
-                </li>
-                <li class="page-item active">
-                <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item">
-                <a class="page-link" href="#">2</a>
-                </li>
-                <li class="page-item">
-                <a class="page-link" href="#">3</a>
-                </li>
-                <li class="page-item">
-                <a class="page-link" href="#">4</a>
-                </li>
-                <li class="page-item">
-                <a class="page-link" href="#">5</a>
-                </li>
-                <li class="page-item">
-                <a class="page-link" href="#">&raquo;</a>
-                </li>
-            </ul>
-        </div>
+           
     </footer>
     </div>
-    -->
+
+    
+        
+    <script src="public/js/shifumi.js"></script>
 </body>
 </html>

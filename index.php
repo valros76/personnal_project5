@@ -37,6 +37,14 @@ if(isset($_GET['action'])){
         portfolio();
     }
 
+    if($_GET['action'] === 'bonus'){
+        bonus();
+    }
+
+    if($_GET['action'] === 'shifumi'){
+        shifumi();
+    }
+
 }
 
 else{
