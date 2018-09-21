@@ -49,7 +49,7 @@ require('models/database.php');
                 }
             
             
-        header('Location:'.connexion());
+        header('Location:?action=connexion');
     }
 
     function connexion(){
@@ -80,29 +80,44 @@ require('models/database.php');
                 echo 'Mauvais identifiant ou mot de passe.';
             }
         }
-
-        header('Location:'.home());
+        header('Location:?action=portfolio');
     }
 
     function disconnect(){
         $_SESSION = array();
         session_destroy();
-
         echo 'Vous êtes déconnectés !';
-
-        header('Location:'.home());
+        header('Location:?action=home');
     }
 
     function portfolio(){
-        require('views/pages/portfolio.php');
+        if(isset($_SESSION['username'])){
+            require('views/pages/portfolio.php');
+        }
+        else{
+            echo 'Veuillez vous connecter pour avoir accès au contenu.';
+            connexion();
+        }
     }
 
     function bonus(){
-        require('views/pages/bonus/bonus.php');
+        if(isset($_SESSION['username'])){
+            require('views/pages/bonus/bonus.php');
+        }
+        else{
+            echo 'Veuillez vous connecter pour avoir accès au contenu.';
+            connexion();
+        }
     }
 
     function shifumi(){
-        require('views/pages/bonus/shifumi.php');
+        if(isset($_SESSION['username'])){
+            require('views/pages/bonus/shifumi.php');
+        }
+        else{
+            echo 'Veuillez vous connecter pour avoir accès au contenu.';
+            connexion();
+        }
     }
 
 ?>

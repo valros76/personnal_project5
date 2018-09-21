@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +22,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?action=home">Acceuil <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?action=portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?action=bonus">Bonus</a>
-                    </li>
                     <?php 
                         if(!isset($_SESSION['username'])){;
                         ?>
@@ -41,6 +35,12 @@
                         }
                         else{;
                     ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?action=portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?action=bonus">Bonus</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="?action=disconnect">Déconnexion</a>
                         </li>
