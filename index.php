@@ -45,6 +45,14 @@ if(isset($_GET['action'])){
         shifumi();
     }
 
+    if($_GET['action'] === 'contact'){
+        contact();
+    }
+
+    if($_GET['action'] === 'contact_me'){
+        contact_me();
+    }
+
 }
 
 else{

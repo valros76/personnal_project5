@@ -9,10 +9,10 @@
             <p>
                 <form action="?action=connect" method="post">
                     <label for="username">Username</label>
-                    <input type="text" name="username"/>
+                    <input type="text" class="form-control" name="username"/>
                     <br/>
                     <label for="password">Password</label>
-                    <input type="password" name="password"/>
+                    <input type="password" class="form-control" name="password"/>
                     <br/>
                     <button class="btn btn-success">Se connecter</button>
                 </form>

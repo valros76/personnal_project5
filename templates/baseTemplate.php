@@ -55,7 +55,13 @@
     </section>
 
     <footer class="foot">
-           
+           <p>
+                Site créé par Valérian Dufrène - 2018
+           </p>
+
+           <p>
+               <a href="?action=contact">Me contacter</a>
+           </p>
     </footer>
     </div>
 

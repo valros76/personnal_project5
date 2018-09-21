@@ -120,4 +120,17 @@ require('models/database.php');
         }
     }
 
+    function contact(){
+        require('views/pages/contact.php');
+    }
+
+    function contact_me(){
+        if(isset($_SESSION['username'])){
+            require('views/pages/giveContact.php');
+        }
+        else{
+            echo 'Veuillez vous connecter pour avoir accès au contenu.';
+            contact();
+        }
+    }
 ?>
