@@ -165,7 +165,27 @@ body{
     padding:0;
 }
 
+.rating{
+    display:block;
+    direction:rtl;
+    float:top;
+    clear:both;
+    margin:0 auto;
+}
 
+ .rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+ }
+ .rating a:hover,
+ .rating a:focus,
+ .rating a:hover ~ a,
+ .rating a:focus ~ a {
+    color: gold;
+    cursor: pointer;
+ }
 /*++++++++++++++++++Media Queries++++++++++++++++++++*/
 
 @media screen and (max-width:768px){
