@@ -60,6 +60,10 @@
            </p>
 
            <p>
+                <a href="https://github.com/valros76?tab=repositories" target="_blank">Github - <i class="fab fa-github-square"></i></a>
+            </p>
+
+           <p>
                <a href="?action=contact">Me contacter</a>
            </p>
     </footer>
