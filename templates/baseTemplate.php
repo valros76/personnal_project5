@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -55,13 +56,17 @@
     </section>
 
     <footer class="foot">
-           <p>
-                Site créé par Valérian Dufrène - 2018
-           </p>
+        <p>
+            Site créé par Valérian Dufrène - 2018
+        </p>
+        
+        <p>
+            <a href="https://github.com/valros76?tab=repositories" target="_blank">Github - <i class="fab fa-github-square"></i></a>
+        </p>
 
-           <p>
-               <a href="?action=contact">Me contacter</a>
-           </p>
+        <p>
+            <a href="?action=contact">Me contacter</a>
+        </p>
     </footer>
     </div>
 

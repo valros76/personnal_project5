@@ -11,7 +11,7 @@
             <p>
                 Bienvenue sur la page d\'accueil du site.<br/><br/>
                 Vous êtes ici pour consulter mon portfolio ?<br/><br/>
-                <a href="?action=portfolio"><button class="btn btn-info">Consulter</button></a><br/>
+                <a href="?action=portfolio"><button class="btn btn-info">Consulter<br/><i class="fas fa-chevron-down"></i></button></a><br/>
                 <hr/>
                 <img src="public/img/nomad.png" alt="img_Accueil"/>
             </p>
