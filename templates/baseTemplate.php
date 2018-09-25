@@ -70,8 +70,7 @@
     </footer>
     </div>
 
-    <script src="public/js/cookies.js"></script>
-    <script src="public/js/rating.js"></script>
+    <?= $scripts; ?>
         
 </body>
 </html>

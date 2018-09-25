@@ -5,6 +5,10 @@ class User{
     protected $_username;
     protected $_password;
     protected $_email;
+    protected $_noteP1;
+    protected $_noteP2;
+    protected $_noteP3;
+    protected $_noteP4;
 
     public function __construct(array $donnees){
         $this->hydrate($donnees);
@@ -35,6 +39,22 @@ class User{
         return $this->_email;
     }
 
+    public function noteP1(){
+        return $this->_noteP1;
+    }
+
+    public function noteP2(){
+        return $this->_noteP2;
+    }
+
+    public function noteP3(){
+        return $this->_noteP3;
+    }
+
+    public function noteP4(){
+        return $this->_noteP4;
+    }
+
     public function setId($id){
         $id = (int) $id;
         if(is_int($id)){
@@ -54,6 +74,34 @@ class User{
 
     public function setEmail($email){
         $this->_email = $email;
+    }
+
+    function setNoteP1($noteP1){
+        $noteP1 = (int) $noteP1;
+        if(is_int($noteP1)){
+            $this->_noteP1 = $noteP1;
+        }
+    }
+
+    function setNoteP2($noteP2){
+        $noteP2 = (int) $noteP2;
+        if(is_int($noteP2)){
+            $this->_noteP2 = $noteP2;
+        }
+    }
+
+    function setNoteP3($noteP3){
+        $noteP3 = (int) $noteP3;
+        if(is_int($noteP3)){
+            $this->_noteP3 = $noteP3;
+        }
+    }
+
+    function setNoteP4($noteP4){
+        $noteP4 = (int) $noteP4;
+        if(is_int($noteP4)){
+            $this->_noteP4 = $noteP4;
+        }
     }
 
     public function nomValide(){

@@ -7,11 +7,15 @@ class UsersManager{
     }
 
     public function add(User $user){
-        $req = $this->_bdd->prepare('INSERT INTO user(username,password,email) VALUES(:pseudo,:password,:email)');
+        $req = $this->_bdd->prepare('INSERT INTO user(username,password,email,noteP1, noteP2, noteP3, noteP4) VALUES(:pseudo,:password,:email,:noteP1,:noteP2,:noteP3,:noteP4)');
     
         $req->bindValue(':pseudo', $user->username());
         $req->bindValue(':password', $user->password());
         $req->bindValue(':email', $user->email());
+        $req->bindValue(':noteP1', $user->noteP1());
+        $req->bindValue(':noteP2', $user->noteP2());
+        $req->bindValue(':noteP3', $user->noteP3());
+        $req->bindValue(':noteP4', $user->noteP4());
 
         $req->execute();
 
@@ -55,13 +59,13 @@ class UsersManager{
 
     public function get($info){
         if (is_int($info)){
-            $req = $this->_bdd->query('SELECT id,username,password,email FROM user WHERE id = '.$info);
+            $req = $this->_bdd->query('SELECT id,username,password,email,noteP1,noteP2,noteP3,noteP4 FROM user WHERE id = '.$info);
             $donnees = $req->fetch(PDO::FETCH_ASSOC);
             
             return new User($donnees);
         }
         else{
-            $req = $this->_bdd->prepare('SELECT id,username,password,email FROM user WHERE username = :username');
+            $req = $this->_bdd->prepare('SELECT id,username,password,email,noteP1,noteP2,noteP3,noteP4 FROM user WHERE username = :username');
             $req->execute([':username' => $info]);
             
             return new User($req->fetch(PDO::FETCH_ASSOC));
@@ -71,7 +75,7 @@ class UsersManager{
     public function getList($users){
         $users = [];
     
-        $req = $this->_bdd->prepare('SELECT id,username,email FROM user WHERE username <> :username ORDER BY username');
+        $req = $this->_bdd->prepare('SELECT id,username,email,noteP1,noteP2,noteP3,noteP4 FROM user WHERE username <> :username ORDER BY username');
         $req->execute([':username' => $pseudo]);
         
         while ($donnees = $req->fetch(PDO::FETCH_ASSOC)){
@@ -92,10 +96,42 @@ class UsersManager{
     }
 
     public function updateMail(User $user){
-        $req = $this->_bdd->prepare('UPDATE user SET email = :email WHERE id = '. $user->id() .'');
+        $req = $this->_bdd->prepare('UPDATE user SET email = :email WHERE id ='. $user->id() .'');
     
         $req->bindValue(':email', $user->email(), PDO::PARAM_INT);
         
+        $req->execute();
+    }
+
+    public function updateNoteP1(User $user){
+        $req = $this->_bdd->prepare('UPDATE user SET noteP1 = :noteP1 WHERE id='.$user->id().'');
+
+        $req->bindValue(':noteP1', $user->noteP1(), PDO::PARAM_INT);
+
+        $req->execute();
+    }
+
+    public function updateNoteP2(User $user){
+        $req = $this->_bdd->prepare('UPDATE user SET noteP2 = :noteP2 WHERE id='.$user->id().'');
+
+        $req->bindValue(':noteP2', $user->noteP2(), PDO::PARAM_INT);
+
+        $req->execute();
+    }
+
+    public function updateNoteP3(User $user){
+        $req = $this->_bdd->prepare('UPDATE user SET noteP3 = :noteP3 WHERE id='.$user->id().'');
+
+        $req->bindValue(':noteP3', $user->noteP3(), PDO::PARAM_INT);
+
+        $req->execute();
+    }
+
+    public function updateNoteP4(User $user){
+        $req = $this->_bdd->prepare('UPDATE user SET noteP4 = :noteP4 WHERE id='.$user->id().'');
+
+        $req->bindValue(':noteP4', $user->noteP4(), PDO::PARAM_INT);
+
         $req->execute();
     }
 
