@@ -19,4 +19,9 @@
     ';
 
 $content = ob_get_clean();?>
+
+<?php ob_start();
+
+$scripts = ob_get_clean(); ?>
+
 <?php require('templates/baseTemplate.php'); ?>

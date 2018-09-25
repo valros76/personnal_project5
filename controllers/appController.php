@@ -80,14 +80,14 @@ require('models/database.php');
                 echo 'Mauvais identifiant ou mot de passe.';
             }
         }
-        header('Location:?action=portfolio');
+        portfolio();
     }
 
     function disconnect(){
         $_SESSION = array();
         session_destroy();
         echo 'Vous êtes déconnectés !';
-        header('Location:?action=home');
+        home();
     }
 
     function portfolio(){
