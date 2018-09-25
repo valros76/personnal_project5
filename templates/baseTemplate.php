@@ -57,7 +57,7 @@
 
     <footer class="foot">
         <p>
-            Site créé par Valérian Dufrène - 2018
+            V.D - 2018
         </p>
         
         <p>
@@ -70,7 +70,9 @@
     </footer>
     </div>
 
+    <script src="public/js/menu.js"></script>
     <?= $scripts; ?>
+
         
 </body>
 </html>
