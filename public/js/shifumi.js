@@ -1,9 +1,9 @@
-const buttons = document.querySelectorAll("button");
+const buttons = document.getElementsByClassName("game");
 		
 		for(let i = 0; i < buttons.length; i++){
 			buttons[i].addEventListener("click", function() {
 				const joueur = buttons[i].innerHTML;
-				const robot = buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
+				const robot = buttons[Math.floor(Math.random() * (buttons.length) )].innerHTML;
 
 				let resultat = "";
 

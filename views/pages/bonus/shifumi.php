@@ -7,11 +7,11 @@
         <article>
             <h3>Shifumi</h3>
             <div class="textArticleHome">
-                <button class="btn btn-info">Pierre</button>
-                <button class="btn btn-success">Feuille</button>
-                <button class="btn btn-warning">Ciseaux</button>
+                <button class="btn btn-info game">Pierre</button>
+                <button class="btn btn-success game">Feuille</button>
+                <button class="btn btn-warning game">Ciseaux</button>
                 <hr/>
-                <div id="resultatJoueur" style="display:inline-block;">Joueur</div>
+                <div id="resultatJoueur" style="display:inline-block;">Joueur : X</div>
                 <hr width="50px"/>
                 <div>
                     VS
