@@ -86,6 +86,9 @@
                     <code>Langages : HTML / CSS / PHP</code><br/>
                     <code>CMS : Non</code><br/>
                     <code>Note : <span id="rateP4">'. $noteP4 .'</span>/5</code><br/>
+                    <ul id="commits">
+                    
+                    </ul>
                     <a href="https://projet4-valros.000webhostapp.com/" target="_blank">Visiter "Billet simple pour l\'Alaska"<br/><i class="fas fa-arrow-right"></i></a><br/>
                     <div class="rating"><!--
                             --><a href="?action=noteProject4_5" onclick="getNoteP4(5)"><i class="far fa-star" aria-hidden="true"></i></a><!--
