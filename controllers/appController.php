@@ -1,5 +1,4 @@
 <?php
-
 require('models/database.php');
 
     function home(){
@@ -145,14 +144,33 @@ require('models/database.php');
     }
 
     function noteProject1($note){
-        $noteP1 = $note;
+    
         $idProject = 1;
         $bdd = dbConnect();
+        $notesManager = new NotesManager($bdd);
+        $noteTotale = $notesManager->sumP1();
+        $nbUsers = $notesManager->countUsers();
+        $roundNote = $noteTotale / $nbUsers;
+        $noteP1 = new Note([
+            'id' => $idProject,
+            'name' => 'projet1',
+            'note' => $noteTotale
+        ]);
+        $notesManager->update($noteP1);
         $manager = new UsersManager($bdd);
         $user = $manager->get($_SESSION['username']);
-        $user->setNoteP1($noteP1);
+        $user->setNoteP1($note);
         $manager->updateNoteP1($user);
         portfolioP1();
+    }
+
+    function getNoteP1(){
+        $bdd = dbConnect();
+        $notesManager = new NotesManager($bdd);
+        $noteTotale = $notesManager->sumP1();
+        $nbUsers = $notesManager->countUsers();
+        $roundNote = floor($noteTotale / $nbUsers);
+        return $roundNote;
     }
 
     function noteProject2($note){
@@ -166,6 +184,15 @@ require('models/database.php');
         portfolioP2();
     }
 
+    function getNoteP2(){
+        $bdd = dbConnect();
+        $notesManager = new NotesManager($bdd);
+        $noteTotale = $notesManager->sumP2();
+        $nbUsers = $notesManager->countUsers();
+        $roundNote = floor($noteTotale / $nbUsers);
+        return $roundNote;
+    }
+
     function noteProject3($note){
         $noteP3 = $note;
         $idProject = 3;
@@ -175,6 +202,15 @@ require('models/database.php');
         $user->setNoteP3($noteP3);
         $manager->updateNoteP3($user);
         portfolioP3();
+    }
+
+    function getNoteP3(){
+        $bdd = dbConnect();
+        $notesManager = new NotesManager($bdd);
+        $noteTotale = $notesManager->sumP3();
+        $nbUsers = $notesManager->countUsers();
+        $roundNote = floor($noteTotale / $nbUsers);
+        return $roundNote;
     }
 
     function noteProject4($note){
@@ -187,6 +223,16 @@ require('models/database.php');
         $manager->updateNoteP4($user);
         portfolioP4();
     }
+
+    function getNoteP4(){
+        $bdd = dbConnect();
+        $notesManager = new NotesManager($bdd);
+        $noteTotale = $notesManager->sumP4();
+        $nbUsers = $notesManager->countUsers();
+        $roundNote = floor($noteTotale / $nbUsers);
+        return $roundNote;
+    }
+
     
 
     function bonus(){

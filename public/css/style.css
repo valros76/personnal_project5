@@ -166,16 +166,14 @@ body{
 }
 
 #commits{
+    display:none;
     width:50%;
     word-wrap:break-word;
     list-style:none;
     border:2px solid black;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    align-items:center;
     margin:0 auto;
     padding:0;
+    overflow:auto;
 }
 
 #commits li{
@@ -183,6 +181,14 @@ body{
     margin:0 auto;
     padding:0;
 }
+
+#commits li p{
+    background:rgb(65,65,65);
+    color:rgb(255,255,255);
+    font-weight:bold;
+    font-family:monospace;
+}
+
 .rating{
     display:block;
     direction:rtl;
