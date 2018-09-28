@@ -105,6 +105,7 @@ $content = ob_get_clean();?>
 <?php ob_start();
     echo '<script src="public/js/cookies.js"></script>';
     echo '<script src="public/js/rating.js"></script>';
+    echo '<script src="public/js/github.js"></script>';
 $scripts = ob_get_clean(); ?>
 
 <?php require('templates/baseTemplate.php'); ?>
